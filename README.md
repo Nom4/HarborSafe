@@ -33,3 +33,8 @@ sudo ./install_projet_HarborSafe.sh
 ## 📄 License
 
 MIT – Utilisation libre et partage encouragé.
+
+## 💡 Mot de l'auteur
+
+Aucune prétention, uniquement un petit projet perso afin de bien comprendre comment automatiser le déploiement d'un stack Docker x Portainer sur Ubuntu Server 24.04 avec les fonctionnalité rootless, apparmor et sécurisation.
+En cours de vulscan avec Nessus.
