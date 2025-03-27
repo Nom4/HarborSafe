@@ -1,4 +1,4 @@
-# HarborSafe
+![HarborSafe_logo](https://github.com/user-attachments/assets/9cd2a3c8-fd83-4456-9e66-0eb29ce92398)
 
 **HarborSafe** est un projet d’installation automatisée d’un environnement Docker rootless sécurisé avec TLS, géré via Portainer Business Edition.
 
