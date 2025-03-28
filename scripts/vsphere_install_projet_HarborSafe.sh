@@ -9,8 +9,8 @@
 # ==============================================
 #   🚢 HarborSafe – Secure Docker Rootless Stack
 #   🔐 TLS + Portainer BE + UFW + userns-remap
-#   🛠️  Script : install_projet_HarborSafe.sh
-#   📅  Date   : 2025-03-27
+#   🛠️  Script : vsphere_install_projet_HarborSafe.sh
+#   📅  Date   : 2025-03-28
 #   🧑‍💻 Author : LLE
 # ==============================================
 
@@ -118,6 +118,7 @@ echo "🧱 Configuration UFW"
 sudo apt install -y ufw
 sudo ufw allow OpenSSH
 sudo ufw allow 9443/tcp comment "Portainer HTTPS"
+# A remplacer par le range ou l'adresse IP source
 sudo ufw allow from 192.168.68.0/24 to any port 2376 proto tcp comment "Docker API TLS"
 sudo ufw limit OpenSSH
 yes | sudo ufw enable
@@ -172,6 +173,7 @@ echo "   Certificats : cert.pem / key.pem / ca.pem"
 echo "📤 Préparation des certificats client pour Portainer"
 mkdir -p /tmp/certs
 cp ~/docker-certs/{cert.pem,key.pem,ca.pem} /tmp/certs/
+# A remplacer par le compte utilisateur en vigueur
 chown -R uadm:uadm /tmp/certs
 chmod -R u=rwX,go=rX /tmp/certs
 
