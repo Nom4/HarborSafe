@@ -6,7 +6,8 @@
 
 ## 📦 Contenu
 
-- `scripts/install_projet_HarborSafe.sh` – Script principal d’installation
+- `scripts/proxmox_install_projet_HarborSafe.sh` – Script principal d’installation sur environnement ProxMox
+- `scripts/vsphere_install_projet_HarborSafe.sh` – Script principal d’installation sur environnement vSphere
 - `scripts/cleanup_HarborSafe.sh` – Script de nettoyage post-déploiement
 - `docs/checklist_HarborSafe.md` – Documentation complète en Markdown
 - `docs/HarborSafe_Checklist.pdf` – Version PDF de la checklist
