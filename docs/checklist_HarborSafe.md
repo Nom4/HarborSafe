@@ -67,21 +67,26 @@ git clone https://github.com/Nom4/HarborSafe.git
 ## ⚙️ Étapes de déploiement
 
 ### 1. Créer / éditer le script principal
-
+Pour ProxMox :
 ```bash
-nano install_docker_tls_secure_with_client_cert.sh
+nano proxmox_install_projet_HarborSafe.sh
+```
+
+Pour vSphere :
+```bash
+nano vsphere_install_projet_HarborSafe.sh
 ```
 
 ### 2. Rendre le script exécutable
 
 ```bash
-chmod +x install_docker_tls_secure_with_client_cert.sh
+chmod +x version_install_projet_HarborSafe.sh
 ```
 
 ### 3. Exécuter le script
 
 ```bash
-sudo ./install_docker_tls_secure_with_client_cert.sh
+sudo ./version_install_projet_HarborSafe.sh
 ```
 
 ---
