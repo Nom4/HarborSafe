@@ -30,6 +30,10 @@ sudo apt update && apt upgrade -y
 hostnamectl hostname SERVERNAME
 hostname
 
+sudo truncate -s 0 /etc/machine-id
+sudo rm -f /var/lib/dbus/machine-id
+sudo ln -s /etc/machine-id /var/lib/dbus/machine-id
+
 sudo nano /etc/netplan/00-installer-config.yaml
 ```
 Y entrer :
@@ -58,6 +62,20 @@ sudo netplan apply
 sudo reboot
 ```
 ```bash
+sudo rm -f /etc/ssh/ssh_host_*
+sudo dpkg-reconfigure openssh-server
+
+sudo journalctl --rotate
+sudo journalctl --vacuum-time=1s
+sudo truncate -s 0 /var/log/wtmp /var/log/btmp
+sudo rm -rf /var/log/*.gz /var/log/*.1
+
+history -c && history -w
+rm -f ~/.bash_history /root/.bash_history
+
+sudo touch /etc/post-clone.txt
+echo "Clone préparé le $(date) sur $(hostname)" | sudo tee -a /etc/post-clone.txt
+
 sudo passwd root
 
 sudo apt update
