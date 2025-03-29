@@ -23,6 +23,38 @@ Déployer une stack Docker rootless, sécurisée via TLS, et managée par Portai
 
 ---
 
+## ⚙️ Prérequis
+```bash
+sudo apt update && apt upgrade -y
+
+hostnamectl hostname SERVERNAME
+hostname
+
+sudo nano /etc/netplan/00-installer-config.yaml
+```
+network:
+  version: 2
+  ethernets:
+    ens18:
+      addresses:
+        - 192.168.68.54/24
+      routes:
+        - to: default
+          via: 192.168.68.1
+      nameservers:
+        addresses: [192.168.68.110, 8.8.8.8]
+
+```bash
+sudo passwd root
+
+sudo apt update
+sudo apt install -y git nano iputils-ping netcat-openbsd
+
+cd /
+cd /tmp/
+git clone https://github.com/Nom4/HarborSafe.git
+```
+
 ## ⚙️ Étapes de déploiement
 
 ### 1. Créer / éditer le script principal
