@@ -31,7 +31,7 @@ hostnamectl hostname SERVERNAME
 hostname
 
 sudo nano /etc/netplan/00-installer-config.yaml
-```
+
 network:
   version: 2
   ethernets:
@@ -43,7 +43,7 @@ network:
           via: 192.168.68.1
       nameservers:
         addresses: [192.168.68.110, 8.8.8.8]
-
+```
 ```bash
 sudo passwd root
 
