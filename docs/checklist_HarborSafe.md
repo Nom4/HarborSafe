@@ -36,6 +36,7 @@ network:
   version: 2
   ethernets:
     ens18:
+      dhcp4: false
       addresses:
         - 192.168.68.54/24
       routes:
