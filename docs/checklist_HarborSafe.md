@@ -51,7 +51,11 @@ Puis
 ```bash
 sudo chmod 600 /etc/netplan/00-installer-config.yaml
 sudo chown root:root /etc/netplan/00-installer-config.yaml
+
+sudo touch /etc/cloud/cloud-init.disabled
+sudo rm -rf /etc/netplan/50-cloud-init.yaml
 sudo netplan apply
+sudo reboot
 ```
 ```bash
 sudo passwd root
