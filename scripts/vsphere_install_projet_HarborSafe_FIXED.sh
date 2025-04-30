@@ -154,8 +154,8 @@ docker volume create portainer_data
 echo "🔐 Déploiement Portainer BE (Docker rootless, accès via TLS)"
 docker run -d \
   --name portainer \
-  --restart=always \
-  -p 9443:9443 \
+  --restart always \
+  --net host \
   -v portainer_data:/data \
   -v $CERT_DST:/certs \
   -v $LICENSE_PATH:/license \
